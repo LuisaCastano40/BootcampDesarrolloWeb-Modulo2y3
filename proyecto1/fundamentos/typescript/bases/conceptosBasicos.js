@@ -5,27 +5,27 @@ console.log('hola soy typescript');
 //Si importa el tipo de variable
 //asume que esa variable SOLO recibe el tipo de datos que usted guardó por primera vez
 //declaración implícita
-let miVariable = "abc";
+var miVariable = "abc";
 miVariable = 'luisa';
-let miNumero = 20;
+var miNumero = 20;
 miNumero = 30;
 //Declaración explícita
-let miNumero2;
+var miNumero2;
 //Asignas un valor respetando el tipo declarado
 miNumero2 = 30;
 //console.log(miNumero2);
 //TIPOS DE DATOS 
 //DATOS PRIMITIVOS -> Básicos (string, numero, booleanos, undefined, null)
 //numérico (-1, 10, 5.6 ...)
-let numero;
+var numero;
 //String -> texto
-let texto;
+var texto;
 //Booleanos
-let buleano;
+var buleano;
 //Indefinidos
-let indefinido;
+var indefinido;
 //Nulos
-let nulo;
+var nulo;
 numero = 20;
 texto = "hola";
 buleano = false;
@@ -34,24 +34,24 @@ nulo = null;
 //TIPOS DE DATOS ESPECIALES
 //Arrays , objetos, unkwon -> desconocido y any -> cualquiera
 //implicitamente es un arreglo de números
-let arreglo = [1, 2, 5];
+var arreglo = [1, 2, 5];
 //declaración explícita de un arreglo
 //forma 1
-let arreglo2;
-let arreglo3;
-let arreglo4;
+var arreglo2;
+var arreglo3;
+var arreglo4;
 arreglo = [10, 70, 35];
 arreglo2 = [100, 700, 350];
 arreglo3 = ['luisa', 'cristian', 'laura'];
 arreglo4 = [true, false];
 //forma 2 de declarar tipos de datos en los arreglos
-let miArreglo;
+var miArreglo;
 miArreglo = ['luisa', 'angelo'];
 //objetos - unknown - any - funciones
 //nuestras variables reciben datos de cualquier tipo
 //no es tan usado 
-let desconocido; //usted recibe cualquier tipo de dato, porque no sabe qué va a llegar
-let cualquiera; //no me importa lo que llegue, guárdemelo 
+var desconocido; //usted recibe cualquier tipo de dato, porque no sabe qué va a llegar
+var cualquiera; //no me importa lo que llegue, guárdemelo 
 desconocido = 'luisa';
 desconocido = 3;
 desconocido = [true, false];
@@ -59,10 +59,10 @@ cualquiera = false;
 cualquiera = undefined;
 cualquiera = null;
 // OBJETOS 
-let miObjeto; // -> [] o {}
+var miObjeto; // -> [] o {}
 //declaración explicita de un objeto literal
 // Asignación -> = -> valores y Declaración -> : -> tipo
-let miObjetoCarro;
+var miObjetoCarro;
 miObjetoCarro = {
     id: 1,
     marca: 'BMW',
@@ -70,22 +70,25 @@ miObjetoCarro = {
 };
 //FUNCIONES
 //Las funciones pueden devolver valores o puede que no devuelvan nada
-let retorno;
+// devolver datos de tipo number, string, boolean, object
+//las que no devuelven -> :void -> sólo me ejecuto
+var retorno;
 function miFuncion1() {
     console.log("soy función 1");
 }
 //ejecute
 miFuncion1();
 //guárdese en una variable
-//retorno = miFuncion1();
+//retorno = miFuncion1(); -> nos retorna indefinido
 //mi variable le puedo dar parámetros -> le asignamos tipos
 // fn flecha -> puede que retorne o no retorne
-const miFuncion2 = (num1, num2) => {
+var miFuncion2 = function (num1, num2) {
     return num1 * num2;
 };
+//retorno = miFuncion2() -> number
 //Además yo puedo especificar el tipo de la respuesta que me va a dar
 function miFuncion3(num1, num2) {
     return num1 + num2;
 }
-retorno = miFuncion3(2, 5);
+retorno = miFuncion3(2, 5); //-> number
 console.log(retorno);
