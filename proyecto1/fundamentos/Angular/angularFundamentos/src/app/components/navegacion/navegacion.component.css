@@ -1,0 +1,14 @@
+/* Estilos de mi menú de navegación */
+
+.miLista{
+    background-color: burlywood;
+    height: 100px;
+    font-size: 25px;
+    color: brown;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}

@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importaciones de las fuentes */
+/* condiciones iniciales
+
+*{
+margin: 0;
+padding: 0;
+overflow:hidden
+}
+
+*/
+
+/* 
+
+Nuestras variables de css
+root: {
+medidas que siempre se repitan
+paleta de colores
+font family de su tipografía
+}
+
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
