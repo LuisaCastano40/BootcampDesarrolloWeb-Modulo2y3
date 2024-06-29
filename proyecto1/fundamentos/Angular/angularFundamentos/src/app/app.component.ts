@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavegacionComponent } from './components/navegacion/navegacion.component';
-import { FooterComponent } from './components/footer/footer.component';
+// import { NavegacionComponent } from './components/navegacion/navegacion.component';
+// import { FooterComponent } from './components/footer/footer.component';
 
 // 1. Debo importar el componente que quiero usar, y decirle que lo quiero
 //usar
@@ -9,7 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
   selector: 'app-root',
   standalone: true,
   //Acá especifica las importaciones que va a usar
-  imports: [RouterOutlet, NavegacionComponent, FooterComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -1,0 +1,10 @@
+.miFooter{
+    width: 100%;
+    background-color: burlywood;
+    color: brown;
+    font-size: 25px;
+    text-align: center;
+    padding: 40px;
+    position: fixed;
+    bottom: 0;
+}
