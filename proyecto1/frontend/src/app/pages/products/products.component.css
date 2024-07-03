@@ -1,0 +1,12 @@
+
+.miTarjeta img{
+    padding: 10px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.miTarjeta:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+}

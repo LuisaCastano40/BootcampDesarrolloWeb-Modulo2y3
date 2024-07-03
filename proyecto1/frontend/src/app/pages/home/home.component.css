@@ -1,0 +1,11 @@
+.miCarrusel{    
+    width: 100vw;    
+    max-height: 50vh;    
+    display: flex;    
+    align-items: center;    
+}
+
+.logo{
+    width: 150px;
+    height: 150px;
+}

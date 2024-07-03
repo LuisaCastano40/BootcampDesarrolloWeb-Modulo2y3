@@ -1,0 +1,23 @@
+<main class="mt-5">
+    <h2 class="text-center text-uppercase p-5 ">INGRESO A LA ZONA ADMINISTRADOR DE COOKIESNCREAM</h2>
+    <div class="container col-xl-4 col-md-6 bg-light p-2 mt-3 rounded border border-black mb-5">
+        <div class="row border-dark">
+            <div class="col-12 border-dark">
+                <h3 class="text-center">Formulario de Ingreso</h3>
+                <div class="mb-3">
+                    <label for="correo" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="correo" name="correo" [(ngModel)]="correo"
+                    placeholder="Ingrese su correo" />
+                </div>
+                <div class="mb-3">
+                    <label for="contrasena" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" placeholder="Ingrese su contraseña" id="contrasena" name="contrasena" [(ngModel)]="contrasena"/>
+                </div>
+                
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary mb-3" (click)="iniciarSesion()">Ingresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
