@@ -1,15 +1,15 @@
+// 1. importación dependencias y módulos
 import mongoose from "mongoose";
-import { userModel } from "./user.model,js";
+import { userModel } from "./user.model.js";
 
-const adminSchema = new schema({
-    categoria: {
-        type: String,
+const adminSchema = new mongoose.Schema({
+    categoriaAdmin: {
+        type: Boolean,
         required: true,
-        default: 'admin'
+        default: true
     }
 });
 
-// Usa `discriminator` para crear el modelo `Admin` basado en `Usuario`
-export const AdminModel = userModel.discriminator('Administrador', adminSchema);
+// mongoose -> método "discriminator" -> nos va a permitir crear un modelo de Admin a partir de otro modelo, User
 
-// En Mongoose, discriminator permite implementar herencia de esquemas de una manera similar a la herencia en POO. Permite crear submodelos que heredan el esquema base y añadirles campos adicionales.
+export const adminModel = userModel.discriminator('Admin', adminSchema);

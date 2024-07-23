@@ -1,25 +1,25 @@
-//importamos mongoose -> Schema -> plantilla de los productos
+// 1. Importacion de dependencias y módulos
 import mongoose from 'mongoose';
 
-const schema = mongoose.Schema;
-
-const userSchema = new schema({
+const userSchema = new mongoose.Schema({
     nombreCompleto:{
-        type: String,
-        required:true
-    },
-    correo:{
         type: String,
         required: true
     },
-    contrasena:{
-        type: Number,
-        required:true
+    correo:{
+        type:String,
+        required: true,
+        unique: true
     },
-    imagen:{
-        type: Number,
-        required:true
+    contrasena:{
+        type:String,
+        required: true
+    },
+    imagen: {
+        type: String
     }
+
 });
+
 
 export const userModel = mongoose.model('usuario', userSchema);
