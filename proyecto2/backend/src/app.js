@@ -3,6 +3,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import { connectionMongo } from './config/dataBase.js';
+import userRouter from './routes/user.routes.js';
 
 // 2. Hacer las configuraciones
 const app = express();
@@ -15,6 +16,7 @@ const port = process.env.PORT || 9000 ;
 // const port = process.env.PORT ? process.env.PORT : 6000;
 
 connectionMongo();
+app.use('/users', userRouter);
 
 // 3. Escuchar nuestro servidor para poder ejecutar el app
 app.listen(port, ()=>{
