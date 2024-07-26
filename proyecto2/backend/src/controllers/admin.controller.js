@@ -30,10 +30,37 @@ export const postAdmin = async (request, response) => {
 
 // Mostrar todos los administradores
 export const getAdmin = async (request, response) => {
-    return response.send('Funciona la petición GET de TODOS los admin');
+    try{
+        // -> encontrar -> find()
+        const allAdmins = await adminModel.find();
+        // validadr si no hay usuarios
+        if(allAdmins.length === 0){
+            return response.status(200).json({
+                estado: '200',
+                mensaje: 'No se encontraron administradores en la base de datos',
+                datos: null
+            })
+        }
+
+        return response.status(200).json({
+            estado: '200',
+            mensaje: 'Estos son todos los administradores encontrados',
+            cantidadAdmins: allAdmins.length,
+            admins: allAdmins
+        })
+
+    }catch(e){
+        return response.status(400).json({
+            estado: '400',
+            mensaje: 'Ocurrió un problema al buscar los administradores',
+            datos: error
+        })
+    }
 }
 
 // Eliminar administradores
 export const deleteAdminById = async (request, response) => {
+
+    // TAREÍTA ELIMINAR ADMINISTRADORES
     return response.send('Funciona la petición DELETE de un admin');
 }
