@@ -49,8 +49,8 @@ export default {generateToken, verifyToken};
 
 
 
-const data = {
-    id: '123',
-    nombre: 'luisa'
-}
-generateToken(data);
+// const data = {
+//     id: '123',
+//     nombre: 'luisa'
+// }
+// generateToken(data);
