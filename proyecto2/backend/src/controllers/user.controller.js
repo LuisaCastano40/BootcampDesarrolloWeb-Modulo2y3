@@ -1,4 +1,5 @@
-import { userModel } from "../models/user.model.js"
+import { userModel } from "../models/user.model.js";
+import bcrypt from 'bcryptjs';
 
 // Crear, actualizar y elimimar usuarios, poder visualizar todos mis usuarios o un solo usuario
 
@@ -8,7 +9,15 @@ import { userModel } from "../models/user.model.js"
 export const postUser = async (request, response) => {
 
     try {
-        const newUser = await userModel.create(request.body);
+
+        const {nombreCompleto, correo, contrasena} = request.body;
+        const codedPasswordUser = await bcrypt.hash(contrasena, 10);
+
+        const newUser = await userModel.create({
+            nombreCompleto,
+            correo,
+            contrasena: codedPasswordUser
+        });
         // .save
 
         return response.status(201).json({
