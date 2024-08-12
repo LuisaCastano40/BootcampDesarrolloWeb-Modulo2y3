@@ -104,7 +104,7 @@
 
 ## Modelos, Controladores y Rutas
 
-### - Modelos
+### Modelos
 
    <p>Los modelos en Node.js son responsables de la interacción con la base de datos. Representan las entidades o recursos de la aplicación y definen la estructura y lógica de los datos. Algunas de las principales funciones de los modelos son:</p>
 
