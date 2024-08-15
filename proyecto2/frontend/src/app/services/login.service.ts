@@ -13,6 +13,8 @@ import { Credentials } from '../interfaces/credentials';
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class LoginService {
 
   // Forma moderna de injectar dependencias y encapsular
@@ -23,6 +25,7 @@ export class LoginService {
 
 
   // validar credenciales con la petición post e iniciar sesión
+  // realizar la petición de inicio de sesión
   login(credenciales: Credentials){
     return this.httpClient.post(this.API_URL, credenciales)
   }
@@ -69,7 +72,7 @@ export class LoginService {
     if(this.isAdmin()){
       this.router.navigate(['/private']);
     }else{
-      this.router.navigate(['/']);
+      this.router.navigate(['/']); //inicio
     }
   }
 
