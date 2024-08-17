@@ -13,7 +13,7 @@
                     <h4 class="mt-1 mb-5 pb-1">Formulario de Ingreso</h4>
                   </div>
   
-                  <form>
+                  <form [formGroup]="credentialForm" (ngSubmit)="handleSubmint()">
                     <p class="">Por favor ingresa tus datos para el registro</p>
 
                     <div data-mdb-input-init class="form-outline mb-4">
@@ -21,6 +21,7 @@
                       type="email" 
                       name="correo"
                       class="form-control"
+                      formControlName="email"
                       required />
                       <label class="form-label">Correo electrónico</label>
                     </div>
@@ -31,6 +32,7 @@
                       class="form-control" 
                       placeholder=""
                       name="contrasenia"
+                      formControlName="password"
                       required
                       />
                       <label class="form-label">Contraseña</label>

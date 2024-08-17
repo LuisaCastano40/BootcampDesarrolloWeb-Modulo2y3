@@ -15,8 +15,8 @@ export class UserService {
   // peticiones get, post, delete
 
   // OBTENER USURARIOS
-  getUsers(){
-    return this.httpClient.get(this.URL_USERS);
+  getUsers(options:any){
+    return this.httpClient.get(this.URL_USERS, options);
   }
 
   // CREAR USUARIO
@@ -30,8 +30,8 @@ export class UserService {
   }
 
   // ELIMINAR USUARIO
-  deleteUser(id:string){
-    return this.httpClient.delete(`${this.URL_USERS}/${id}`);
+  deleteUser(id:string, token:any){
+    return this.httpClient.delete(`${this.URL_USERS}/${id}`,token);
   }
 
 }

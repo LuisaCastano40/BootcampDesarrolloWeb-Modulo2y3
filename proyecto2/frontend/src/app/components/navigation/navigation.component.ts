@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LoginComponent } from '../login/login.component';
 import { RegisterComponent } from '../register/register.component';
 import { CommonModule } from '@angular/common';
+import { LoginService } from '../../services/login.service';
 
 @Component({
   selector: 'app-navigation',
@@ -12,8 +13,15 @@ import { CommonModule } from '@angular/common';
 })
 export class NavigationComponent {
 
+  // 1. inyección de dependencias
+  // 2. declaración de variables
+  // 3. métodos
+
+  loginService = inject(LoginService);
+
   isVisibleLogin: boolean = false;
   isVisibleRegister: boolean = false;
+
 
   toggleLogin(){
     this.isVisibleLogin = !this.isVisibleLogin;
@@ -24,5 +32,14 @@ export class NavigationComponent {
     this.isVisibleRegister = !this.isVisibleRegister;
     this.isVisibleLogin = false;
   }
+
+  closeSesion(){
+    this.loginService.logout();
+  }
+
+  // closeModal(){
+  //   this.isVisibleLogin = false;
+  //   this.isVisibleRegister = false;
+  // }
 
 }

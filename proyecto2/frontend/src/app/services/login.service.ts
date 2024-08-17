@@ -70,9 +70,11 @@ export class LoginService {
   // Redireccionar a ruta pública si es usuario y a ruta privada si es admin
   redirect(){
     if(this.isAdmin()){
-      this.router.navigate(['/private']);
+      window.location.href = '/private';
+      // this.router.navigate(['/private']);
     }else{
-      this.router.navigate(['/']); //inicio
+      window.location.href = '/';
+      // this.router.navigate(['/']); //inicio
     }
   }
 
