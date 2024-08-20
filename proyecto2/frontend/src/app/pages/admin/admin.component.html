@@ -2,15 +2,17 @@
 
 <button class="btn btn-dark m-5">Cierre de sesión</button>
 
-<div class="container border border-dark d-flex align-items-center gap-5">
-    <ul>
-        <li><strong>NOMBRE</strong></li>
-        <li><strong>Pepito</strong></li>
-        <li><strong>CORREO</strong></li>
-        <li><strong>Pepito</strong></li>
-        <li><strong>TIPO DE USUARIO</strong></li>
-        <li><strong>Pepito</strong></li>
-    </ul>
-    <button class="btn btn-danger">Eliminar</button>
-</div>
+@for (user of allUsers; track $index) {
+    <div class="container border border-dark d-flex align-items-center gap-5">
+        <ul>
+            <li><strong>NOMBRE</strong></li>
+            <li>{{ user.nombreCompleto }}</li>
+            <li><strong>CORREO</strong></li>
+            <li>{{ user.correo }}</li>
+            <li><strong>TIPO DE USUARIO</strong></li>
+            <li>{{ user.categoriaAdmin === true ? 'Administrador' : 'Usuario normal' }}</li>
+        </ul>
+        <button class="btn btn-danger">Eliminar</button>
+    </div>
+}
 

@@ -14,7 +14,7 @@ import { HttpHeaders } from '@angular/common/http';
 export class AdminComponent {
 
   // Inyectar servicios y dependencias
-  loginServie = inject(LoginService);
+  loginService = inject(LoginService);
   userService = inject(UserService);
   toastrService = inject(ToastrService);
 
@@ -25,19 +25,19 @@ export class AdminComponent {
 
   // mostrar mis usuarios
   obtenerUsuarios(){
-    const token =this.loginServie.getToken();
-    console.log(token)
+    const token = this.loginService.getToken();
+
     // EL TOKEN SE PASA EN LA CAPECERA DE LAS PETICIONES -> HEADER
-    const header = new HttpHeaders({
+    const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}`
     });
 
-    console.log(header)
-    this.userService.getUsers({header}).subscribe(
+    console.log(headers)
+    this.userService.getUsers({headers}).subscribe(
       (res:any) => {
         // validación de que si haya respuesta
         if(res){
-          this.allUsers = res;
+          this.allUsers = res.usuarios;
           console.log(this.allUsers)
           this.toastrService.success('Se muestran todos los usuarios')
         }
@@ -48,7 +48,7 @@ export class AdminComponent {
   borrarUsuarios(){
   }
   cierreSesion(){
-    this.loginServie.logout();
+    this.loginService.logout();
   }
   // ciclo de vida -> cuando se crea el componente
   ngOnInit(){
