@@ -1,27 +1,72 @@
-# Frontend
+<!-- Centrar el título -->
+<h1 align="center">FrontEnd con Node.js - Proyecto de Login</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+<!-- Subtítulo -->
+<p align="center"><em>Bootcamp Desarrollo Web - MÓDULOS 2 Y 3</em></p>
 
-## Development server
+<!-- Separador -->
+<hr>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<!-- Contenido de cada sección -->
 
-## Code scaffolding
+## Instalaciones necesarias
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Instalar version LTS [Node.js](https://nodejs.org/en)
+- Instalar [Angular cli](https://www.npmjs.com/package/@angular/cli)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Dependencias que estaremos utilizando
 
-## Running unit tests
+<p>Todas estas dependencias son opcionales, y su uso dependerá de la necesidad particular de sus proyectos</p>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- [Bootstrap](https://www.npmjs.com/package/bootstrap)
+- [Iconos de Bootstrap](https://www.npmjs.com/package/bootstrap-icons)
+- [ngx-toastr](https://www.npmjs.com/package/ngx-toastr#setup-without-animations)
+- [jwtDecode](https://www.npmjs.com/package/jwt-decode)
 
-## Running end-to-end tests
+## Esquemas o blueprints utilizados para este proyecto
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Componentes
+    - ng generate component carpeta/nombre-del-componente
+2. Interfaces
+    - ng generate interface carpeta/nombre-de-la-interface
+3. Servicios
+    - ng generate service carpeta/nombre-del-servicio
+4. Guards
+    - ng generate guard carpeta/nombre-del-guard
+5. Interceptores (opcionales para manejo de headers)
+    - ng generate interceptor carpeta/nombre-del-interceptor
 
-## Further help
+## Documentación oficial
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [Documentación oficial de Angular en inglés](https://angular.dev/overview) 📚
+- [Documentación oficial de Angular en español](https://docs.angular.lat/) 📚
+- [Curso de Angular 16 y 17 recomendado](https://www.youtube.com/watch?v=soInCF7nbDw) 📚
+- [Curso de Angular 18 recomendado](https://www.youtube.com/watch?v=Qmci2rvN4F8&t=34s) 📚
+
+## Videos de las Sesiones
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=r8fzXvYcAtg&list=PLpD_vYWjZt11y0RdptTt9JkIafhOc-evL&index=64" target="_blank">Introdución general, generación de interfaces, servicios y guards, dependencias y configuración de proveedores</a> 🎥</li>
+
+  <li><a href="https://www.youtube.com/watch?v=VtTX-oFkDtQ&list=PLpD_vYWjZt11y0RdptTt9JkIafhOc-evL&index=65" target="_blank">Código del servicio de login</a> 🎥</li>
+
+  <li><a href="https://www.youtube.com/watch?v=GQMdUPsC5iM&list=PLpD_vYWjZt11y0RdptTt9JkIafhOc-evL&index=66" target="_blank">Código servicios de usuarios y administradores, y guard para la ruta de administrador</a> 🎥</li>
+
+  <li><a href="https://www.youtube.com/watch?v=wFh-leaFU2M&list=PLpD_vYWjZt11y0RdptTt9JkIafhOc-evL&index=67" target="_blank">Lógica de componente para el login usando LoginService y headers de las peticiones</a> 🎥</li>
+
+  <li><a href="https://www.youtube.com/watch?v=-RyxsAvWGrU&list=PLpD_vYWjZt11y0RdptTt9JkIafhOc-evL&index=68" target="_blank">Aclaración entrega final</a> 🎥</li>
+
+</ul>
+
+<!-- Separador -->
+<hr>
+
+<!-- Subtítulo de Autor -->
+<h2 align="center">Autor</h2>
+
+Realizado por: 
+[Luisa Fernanda Castaño Vanegas](https://www.linkedin.com/in/luisacastanovanegas/). © 2024.
+<br>
+
+<!-- Mensaje de Estrellita -->
+<p>Si te gustó el contenido del repositorio, ¡apóyanos dando una ⭐ al proyecto!</p>
