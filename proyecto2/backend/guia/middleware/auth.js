@@ -6,7 +6,7 @@ import { verifyToken } from '../lib/jwt.js'
 // const auth = (req, res, next) => {
 
 // }
-    
+
 // ESTA ES LA OPCIÓN PARA MANEJAR DIFERENTES ROLES
 const auth = (requiredRole) => {
 

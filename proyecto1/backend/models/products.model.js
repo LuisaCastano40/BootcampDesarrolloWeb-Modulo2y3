@@ -16,7 +16,9 @@ const productSchema = new schema({
     precio:{
         type: Number,
         require:true
-    }
+    },
+    disponible: { type: Boolean, required: true },
+    existencias: { type: Number, required: true },
 });
 
 //Utilizamos esa plantilla para cear nuestro modelo -> creamos la coleccion donde se van a guardar los datos
@@ -26,3 +28,17 @@ const productSchema = new schema({
 export const productModel = mongoose.model('usuario', productSchema);
 
 
+import mongoose from 'mongoose';
+
+const usuarioSchema = new mongoose.Schema({
+  nombre: { type: String, required: true },
+  correoElectronico: { type: String, required: true, unique: true },
+  contrasenia: { type: String, required: true },
+  rol: { 
+    type: String, 
+    enum: ['cliente', 'admin'],  // Puede ser cliente o admin
+    default: 'cliente'           // Por defecto, es cliente
+  }
+}, { versionKey: false, timestamps: true });  // Opciones adicionales
+
+export const Usuario = mongoose.model('Usuario', usuarioSchema);

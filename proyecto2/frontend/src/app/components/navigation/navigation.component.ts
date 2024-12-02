@@ -37,9 +37,9 @@ export class NavigationComponent {
     this.loginService.logout();
   }
 
-  // closeModal(){
-  //   this.isVisibleLogin = false;
-  //   this.isVisibleRegister = false;
-  // }
+  closeModal(){
+    this.isVisibleLogin = false;
+    this.isVisibleRegister = false;
+  }
 
 }

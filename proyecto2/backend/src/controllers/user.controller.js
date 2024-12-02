@@ -68,14 +68,15 @@ export const getUsers = async (request, response) => {
 // Mostrar un solo usuario
 export const getUserById = async (request, response) => {
     try {
+        
         let idForGet = request.params.id
         // validar id
-        if(idForGet === ':id' ){
-            return response.json({
-                mensaje: 'Debe ingresar un id válido',
-                id: idForGet
-            })
-        }
+        // if(idForGet === ':id' ){
+        //     return response.json({
+        //         mensaje: 'Debe ingresar un id válido',
+        //         id: idForGet
+        //     })
+        // }
 
         // -> encontrar -> find()
         const userById = await userModel.findById(idForGet);
@@ -134,6 +135,11 @@ export const deleteUserById = async (request, response) => {
     let idForDelete = request.params.id
     const userDeleted = await userModel.findByIdAndDelete(idForDelete);
     // TAREITA: AGREGUE VALIDACIONES QUE CONSIDERE NECESARIAS
+
+    if (!userDeleted) {
+        return res.status(404).json({ message: 'Lo siento! no se encontró producto para borrar' });
+    }
+
 
     return response.status(200).json({
         estado:'200',
